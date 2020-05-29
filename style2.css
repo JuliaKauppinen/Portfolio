@@ -1,0 +1,340 @@
+html {
+	box-sizing: border-box;
+}
+
+*, 
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+/*-------standaard opmaak--------*/
+body {
+	font-family: 'Quattrocento Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 18pt;
+	float: left;
+	padding-top: 3px;
+	padding-left: 4%;
+	color: black;
+}
+
+h2 {
+	text-align: center;
+	font-size: 22pt;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+p {
+	padding: 20px;
+	max-width: 1000px;
+	padding-bottom: 50px;
+	display: block;
+	margin: 0 auto;
+}
+
+img {
+	width: 100%;
+}
+
+/* --------------Hamburger menu-------------- */
+.toggleMenu > a {
+ 	text-decoration: none;
+  	color: white;
+  	font-weight: 800;
+  	font-size: 2em;
+}
+
+.toggleMenu {
+ 	position: absolute;
+ 	right: 24px;
+ 	top: 19px;
+}
+
+.menu i {
+	color: black;
+}
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #D3D3D3;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%; 
+    text-align: center;
+    list-style-type: none;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.6em;
+    display: block; 
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    font-weight: bold;
+}
+
+.closebtn {
+    position: absolute;
+    right: 24px;
+    top: 19px;
+    font-size: 2em;
+}
+
+nav {
+	display: flex; 
+	align-items: center;
+	float: right;
+	padding: 10px 10px;
+}
+
+header {
+	/*grid-area: header;*/
+    height: 70px;
+	background-color: #D3D3D3;
+	width: 100%;
+}
+
+/*------logo--------*/
+header img {
+	float: left;
+	padding-left: 3%;
+	padding-top: 9px;
+	width: 60px;
+}
+
+/*.grid-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+    "header"
+    "titel"
+    "inleiding"
+    "beelmateriaal"
+    "footer";
+}*/
+
+/*--------opmaak losse grids----------*/
+#name {
+	/*grid-area: titel;*/
+    margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.workshop {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #D3D3D3;
+	/*grid-area: inleiding;*/
+}
+
+.screenshots {
+    max-width: 450px;
+    padding-top: 20px;
+    /*display: block;*/
+}
+
+.beeldmateriaal img, .beeldmateriaal video, .beeldmateriaal iframe {
+	display: block;
+	margin: 0 auto;
+    margin-top: 25px;
+}
+
+/*--------------footer--------------*/
+footer {
+	/*grid-area: footer;*/
+    background-color: #D3D3D3;
+}
+
+footer p {
+	text-align: center;
+	padding-top: 3%;
+}
+
+footer ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+footer li a {
+	text-decoration: none;
+	text-align: center;
+	color: #585958;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+	display: 10px;
+}
+
+footer li a:hover {
+	color: black;
+	font-weight: bold;
+}
+
+/*------------------------------ iPad ------------------------------------*/
+@media only screen and (min-width: 624px) {
+
+header img {
+	width: 75px;
+}	
+
+nav {
+	padding-right: 17px;
+}
+
+h1 {
+	font-size: 18pt;
+	margin-top: 0.6em;
+}
+
+footer li {
+	flex: 1 1 0;
+}
+
+/*------------------------------ Kleine laptop ------------------------------------*/
+@media only screen and (min-width: 768px) {	
+
+/*.grid-container {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+    "header			header"
+    "titel			titel"
+    "inleiding		beeldmateriaal"
+    "footer			footer";
+}
+*/
+header img {
+	width: 80px;
+}
+
+h1 {
+	font-size: 18pt;
+}	
+
+/*--------navigatie---------*/
+
+.closebtn { 
+    display: none;
+}
+
+.toggleMenu	{
+    display: none;
+}
+
+.overlay {
+    display: block;
+    position: unset;
+    z-index: unset;
+    left: 0;
+    top: 0;
+    background-color: unset;
+    overflow-x: unset; 
+    overflow-y: unset; 
+    transition: unset;
+}
+
+.overlay-content {
+    display: flex;
+    background-color: #D3D3D3;
+    margin-right: 450px;
+    margin-top: 5px;
+}
+
+.overlay-content li {
+    display: flex;
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.overlay-content a {
+    transition: unset;
+    text-decoration: none;
+    color: #585958;
+    font-size: 1.1em;
+	text-align: center;
+}
+
+.overlay-content li a:hover {
+    color: black;
+    font-weight: bold;
+}	
+
+#name {
+	margin-top: 80px;
+}
+
+nav {
+	padding: 0;
+}
+
+}
+
+/*------------------------------ Grote laptop ------------------------------------*/
+/*1024px*/
+@media only screen and (min-width: 1024px) {
+
+header img {
+	width: 88px;
+}
+
+h1 {
+	font-size: 18pt;
+}	
+
+.overlay-content {
+    display: flex;
+    margin-top: 5px;
+    margin-right: 0;
+}
+
+.overlay-content li {
+    display: flex;
+    flex-grow: 1;
+    text-decoration: none;
+    font-weight: none;
+}
+
+.overlay-content a {
+    transition: unset;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 0.5px;
+	text-align: center;
+}
+
+.overlay-content li:hover {
+    font-weight: bold;
+    color: black;
+}	
+
+#name {
+	margin-top: 40px;
+}
+
+}
