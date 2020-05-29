@@ -27,6 +27,16 @@ h2 {
 	font-size: 22pt;
 }
 
+h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+h4 {
+    text-align: center;
+    padding-top: 10px;
+}
+
 p {
 	margin: 0;
 	padding: 5%;
